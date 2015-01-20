@@ -1,5 +1,4 @@
 package github;
-import core.PageBase;
 import core.TestBase;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;

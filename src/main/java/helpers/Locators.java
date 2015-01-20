@@ -66,45 +66,9 @@ public class Locators {
             }
 
             default: {
-                throw new IllegalArgumentException("Type " + locatorItems[0] + "is " +
-                        "not supported");
+                throw new IllegalArgumentException(
+                        "Type " + locatorItems[0] + "is not supported");
             }
         }
     }
-//
-//    public static By get(String elemntName, String value) {
-//        String [] locatorItem = LOCATORS.getProperty(elemntName).split("=", 2);
-//        LocatorType locatorType = LocatorType.valueOf(locatorItem[0]);
-//
-//        switch (locatorType) {
-//            case css: {
-//                return By.cssSelector(String.format(locatorItem[1], value));
-//            }
-//
-//            case id: {
-//                return By.id(String.format(locatorItem[1], value));
-//            }
-//
-//            case name: {
-//                return By.name(String.format(locatorItem[1], value));
-//            }
-//
-//            case Xpath: {
-//                return By.xpath(String.format(locatorItem[1], value));
-//            }
-//
-//            case tag: {
-//                return By.tagName(String.format(locatorItem[1], value));
-//            }
-//
-//            case linktext: {
-//                return By.linkText(String.format(locatorItem[1], value));
-//            }
-//
-//            default: {
-//                throw new IllegalArgumentException("Type " + locatorItem[0] + "is " +
-//                        "not supported");
-//            }
-//        }
-//    }
 }
