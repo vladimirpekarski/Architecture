@@ -5,7 +5,9 @@ public class DataProviders {
     public static Object[][] provideUsers() {
         Object users[][] = {
                 getUser("realcreds"),
-                getUser()
+                getUser("administrator"),
+                getUser("simpleuser"),
+                getUser("someotherrole")
         };
 
         return users;
