@@ -1,9 +1,6 @@
 package helpers;
 
-
-
 import org.openqa.selenium.By;
-
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;

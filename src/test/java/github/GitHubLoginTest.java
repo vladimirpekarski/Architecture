@@ -9,9 +9,6 @@ import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import pages.PageObject;
 
-import java.io.File;
-import java.io.IOException;
-
 import static helpers.Actions.takeScreenshot;
 import static helpers.DataProviders.provideUsers;
 
