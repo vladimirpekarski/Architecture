@@ -5,6 +5,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.phantomjs.PhantomJSDriver;
 
 import java.util.concurrent.TimeUnit;
 
@@ -40,6 +41,12 @@ public class WebDriverSingelton {
 
             case "htmlunit": {
                 driver = new HtmlUnitDriver();
+                break;
+            }
+
+            case "phantomjsdriver": {
+                driver = new PhantomJSDriver();
+                break;
             }
 
             default: {

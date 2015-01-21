@@ -36,7 +36,7 @@ public class GitHubLoginTest extends TestBase {
     @Test(dataProvider = "users")
     public void logginTest(String userName, String userPass) {
         pageObject.login(userName, userPass);
-        takeScreenshot("c:/Users/asus/Desktop");
+        takeScreenshot("c:/Users/asus/Desktop/screen.png");
         Assert.assertFalse(pageObject.singInLabel.getText().equals("Sign in"));
     }
 
