@@ -2,10 +2,11 @@ package pages;
 
 import core.PageBase;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import static helpers.Locators.get;
+import static helpers.WebDriverSingelton.getDiver;
+
 
 public class PageObject extends PageBase{
     private final By USER_NAME_FIELD = get("loginPage.userNameField");
@@ -15,19 +16,16 @@ public class PageObject extends PageBase{
     public final By SING_IN_LABEL = get("loginPage.SignInLabel");
     public WebElement singInLabel;
 
-    public PageObject(WebDriver driver) {
-        super(driver);
-    }
 
 
     public void login(String userName, String pass) {
-        driver.findElement(USER_NAME_FIELD).clear();
-        driver.findElement(USER_NAME_FIELD).sendKeys(userName);
+        getDiver().findElement(USER_NAME_FIELD).clear();
+        getDiver().findElement(USER_NAME_FIELD).sendKeys(userName);
 
-        driver.findElement(PASSWORD_FIELD).clear();
-        driver.findElement(PASSWORD_FIELD).sendKeys(pass);
+        getDiver().findElement(PASSWORD_FIELD).clear();
+        getDiver().findElement(PASSWORD_FIELD).sendKeys(pass);
 
-        driver.findElement(LOGIN_BUTTON).click();
-        singInLabel = driver.findElement(SING_IN_LABEL);
+        getDiver().findElement(LOGIN_BUTTON).click();
+        singInLabel = getDiver().findElement(SING_IN_LABEL);
     }
 }

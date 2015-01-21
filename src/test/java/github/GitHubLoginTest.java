@@ -1,6 +1,5 @@
 package github;
 import core.TestBase;
-import helpers.DataProviders;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
@@ -16,7 +15,7 @@ public class GitHubLoginTest extends TestBase {
     @Override
     public void setup() throws InterruptedException {
         super.setup();
-        pageObject = new PageObject(driver);
+        pageObject = new PageObject();
         user = provideUsers();
     }
 
