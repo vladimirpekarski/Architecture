@@ -9,24 +9,24 @@ public class CustomListener extends ExitCodeListener {
     @Override
     public void onTestStart(ITestResult result) {
         super.onTestStart(result);
-        System.out.println(result.getMethod().getTestClass().getName() + "-" +
-                result.getMethod().getMethodName() + "started at" +
+        System.out.println(result.getMethod().getTestClass().getName() + " -" +
+                result.getMethod().getMethodName() + " started at " +
                 new Date());
     }
 
     @Override
     public void onTestFailure(ITestResult result) {
         super.onTestStart(result);
-        System.out.println(result.getMethod().getTestClass().getName() + "-" +
-                result.getMethod().getMethodName() + "failed at" +
+        System.out.println(result.getMethod().getTestClass().getName() + " -" +
+                result.getMethod().getMethodName() + " failed at " +
                 new Date());
     }
 
     @Override
     public void onTestSuccess(ITestResult result) {
         super.onTestSuccess(result);
-        System.out.println(result.getMethod().getTestClass().getName() + "-" +
-                result.getMethod().getMethodName() + "passed at" +
+        System.out.println(result.getMethod().getTestClass().getName() + " -" +
+                result.getMethod().getMethodName() + " passed at " +
                 new Date());
     }
 }

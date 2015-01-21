@@ -15,6 +15,6 @@ public class TestBase {
 
     @AfterMethod
     public void teardown() {
-        WebDriverSingelton.getDiver().close();
+        WebDriverSingelton.getDiver().quit();
     }
 }
