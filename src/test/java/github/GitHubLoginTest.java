@@ -1,12 +1,15 @@
 package github;
 import core.TestBase;
+import helpers.CustomListener;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import pages.PageObject;
 import static helpers.DataProviders.provideUsers;
 
+@Listeners(CustomListener.class)
 public class GitHubLoginTest extends TestBase {
     private PageObject pageObject;
     private static Object[][] user;
