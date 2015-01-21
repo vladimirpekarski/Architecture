@@ -7,7 +7,6 @@ import org.openqa.selenium.WebElement;
 import static helpers.Locators.get;
 import static helpers.WebDriverSingelton.getDiver;
 
-
 public class PageObject extends PageBase{
     private final By USER_NAME_FIELD = get("loginPage.userNameField");
     private final By PASSWORD_FIELD = get("loginPage.passwordField");
@@ -15,8 +14,6 @@ public class PageObject extends PageBase{
     private final By REMEBER_CHECKBOX_LOCATOR = get("loginPage.rememberCheckbox", "value");
     public final By SING_IN_LABEL = get("loginPage.SignInLabel");
     public WebElement singInLabel;
-
-
 
     public void login(String userName, String pass) {
         getDiver().findElement(USER_NAME_FIELD).clear();
