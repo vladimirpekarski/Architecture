@@ -1,4 +1,5 @@
 package github;
+
 import core.TestBase;
 import helpers.CustomListener;
 import org.testng.Assert;
@@ -7,6 +8,11 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import pages.PageObject;
+
+import java.io.File;
+import java.io.IOException;
+
+import static helpers.Actions.takeScreenshot;
 import static helpers.DataProviders.provideUsers;
 
 @Listeners(CustomListener.class)
@@ -30,6 +36,9 @@ public class GitHubLoginTest extends TestBase {
     @Test(dataProvider = "users")
     public void logginTest(String userName, String userPass) {
         pageObject.login(userName, userPass);
+        takeScreenshot("c:/Users/asus/Desktop");
         Assert.assertFalse(pageObject.singInLabel.getText().equals("Sign in"));
     }
+
 }
+
