@@ -1,8 +1,10 @@
 package helpers;
+import org.testng.annotations.DataProvider;
+
 import static helpers.Creds.getUser;
 
 public class DataProviders {
-    public static Object[][] provideUsers() {
+    private static Object[][] provideUsers() {
         Object users[][] = {
                 getUser("realcreds"),
                 getUser("administrator"),
@@ -11,5 +13,10 @@ public class DataProviders {
         };
 
         return users;
+    }
+
+    @DataProvider(name = "users")
+    public static Object[][] primeNumber() {
+        return provideUsers();
     }
 }
