@@ -9,8 +9,6 @@ import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import pages.PageObject;
 
-import static helpers.Actions.takeScreenshot;
-
 @Listeners(CustomListener.class)
 public class GitHubLoginTest extends TestBase {
     private PageObject pageObject;
@@ -25,9 +23,7 @@ public class GitHubLoginTest extends TestBase {
     @Test(dataProvider = "users", dataProviderClass = DataProviders.class)
     public void logginTest(String userName, String userPass) {
         pageObject.login(userName, userPass);
-        takeScreenshot("c:/Users/asus/Desktop/screen.png");
         Assert.assertFalse(pageObject.singInLabel.getText().equals("Sign in"));
     }
-
 }
 

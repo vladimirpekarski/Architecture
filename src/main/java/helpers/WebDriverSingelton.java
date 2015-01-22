@@ -55,6 +55,7 @@ public class WebDriverSingelton {
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
         driver.manage().timeouts().setScriptTimeout(4, TimeUnit.SECONDS);
+        System.out.println("Current browser: " + browser);
 
         return driver;
     }
